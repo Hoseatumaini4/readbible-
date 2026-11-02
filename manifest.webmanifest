@@ -1,0 +1,26 @@
+{
+  "id": "./",
+  "name": "Bible Reading Hours",
+  "short_name": "Bible Hours",
+  "description": "An hourly Bible reading journal for Love, Hope and Faith.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#F2F4F1",
+  "theme_color": "#25594A",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "./icons/icon-192.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "./icons/icon-512.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
