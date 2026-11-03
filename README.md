@@ -1,18 +1,18 @@
-# Bible Reading Hours — installable offline app
+# Bible Hours (installable, works offline)
 
-## Important
-A ZIP file cannot be installed directly. Extract this folder and publish its contents to an HTTPS host. GitHub Pages and Netlify offer free hosting. Do not open `index.html` by double-clicking it; service workers require HTTPS (or localhost).
+Hourly Bible reading, 6 AM to 9 PM. Hours cycle Love, Hope, Faith. GPS pins, a day map and roll-ups from quaday to year.
 
-## GitHub Pages (free)
-1. Create a GitHub repository.
-2. Upload the **contents** of this folder (`index.html`, `manifest.webmanifest`, `sw.js`, and `icons/`) to the repository root.
-3. In the repository, open **Settings → Pages**.
-4. Under Build and deployment, choose **Deploy from a branch**, select `main` and `/ (root)`, then Save.
-5. Wait for the published HTTPS URL. Open it once while online.
+## Put it online (needed for GPS and install)
+GPS and "Add to Home screen" only work over HTTPS. This is a static site, no build step.
+- Vercel: new project from this folder (Framework: Other, no build command), or
+- Netlify: drag this folder onto app.netlify.com/drop, or
+- GitHub Pages: push the folder, enable Pages.
+Open the HTTPS link on your phone, allow location, then Add to Home screen.
 
-## Install
-- **Android / Chrome:** open the HTTPS URL, tap the browser menu, choose **Install app** or **Add to Home screen**.
-- **Windows / macOS / Linux:** open the URL in Chrome or Edge and use the install icon in the address bar or menu → **Install app**.
-- **iPhone / iPad:** open the URL in Safari → Share → **Add to Home Screen**.
+## Test on a computer
+    python3 -m http.server 8000     # then open http://localhost:8000
 
-After the first online visit, the app shell is cached for offline opening. Notes and progress are stored locally on that device and do not automatically sync to other devices.
+## Notes
+- All data stays on the device (IndexedDB). Use More > Export backup regularly.
+- The hour rule uses the phone clock.
+- Map pictures come from OpenStreetMap and are cached for areas you have viewed. The path itself always draws.
